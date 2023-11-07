@@ -4,7 +4,7 @@
 #include "butterfly.hpp"
 #include <cstdlib>
 
-Unit* ObjectCreator::getObject(int xMouse, int yMouse) {
+void ObjectCreator::getObject(int xMouse, int yMouse) {
     int choice = rand() % 3;  //generate random number
 
     switch (choice)

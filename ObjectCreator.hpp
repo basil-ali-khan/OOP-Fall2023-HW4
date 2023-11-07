@@ -5,7 +5,7 @@ class ObjectCreator {
         Unit* object;
 
     public:
-        Unit* getObject(int, int);
+        void getObject(int, int);
         ObjectCreator();
         ~ObjectCreator();
 };
