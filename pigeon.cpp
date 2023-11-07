@@ -1,6 +1,10 @@
 #include "pigeon.hpp"
 // pigeon implementation will go here.
 
+//pigeon1 = {7,88,155,103}
+//pigeon2 = {0,237,153,84}
+//pigeon3 = {2,361,159,124}
+
 
 // in project implementation this draw function should only be in superclass
 void Pigeon::draw(){

@@ -19,4 +19,5 @@ class HUMania{
     void createObject(int, int);
     
     // create destructor which deletes all dynamic objects
+    ~HUMania();
 };
