@@ -1,6 +1,8 @@
 #include<SDL.h>
 #include "drawing.hpp"
-class Bee{
+#include "Unit.hpp"
+
+class Bee : public Unit {
 
     SDL_Rect srcRect, moverRect;
     int frame = 0;

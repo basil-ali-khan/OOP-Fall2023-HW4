@@ -1,6 +1,8 @@
 #include<SDL.h>
 #include "drawing.hpp"
-class Butterfly{
+#include "Unit.hpp"
+
+class Butterfly : public Unit {
 
     SDL_Rect srcRect, moverRect;
     int frame = 0;

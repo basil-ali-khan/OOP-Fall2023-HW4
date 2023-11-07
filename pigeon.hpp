@@ -1,6 +1,7 @@
 #include<SDL.h>
 #include "drawing.hpp"
-class Pigeon{
+#include "Unit.hpp"
+class Pigeon : public Unit {
 
     SDL_Rect srcRect, moverRect;
     int frame = 0;
