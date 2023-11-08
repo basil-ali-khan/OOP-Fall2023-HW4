@@ -11,6 +11,6 @@ public:
     // add the fly function here as well.
     void draw();
     void fly();
-    Bee(); 
+    Bee(int xMouse, int yMouse); 
     // may add other overloaded constructors here... 
 };

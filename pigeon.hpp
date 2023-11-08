@@ -10,6 +10,6 @@ public:
     // add the fly function here as well.
     void draw();
     void fly();
-    Pigeon(); 
+    Pigeon(int xMouse, int yMouse); 
     // may add other overloaded constructors here... 
 };

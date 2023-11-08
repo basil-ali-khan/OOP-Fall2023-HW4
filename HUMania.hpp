@@ -10,7 +10,9 @@ using namespace std;
 class HUMania{
 
     //Right now we're creating one pigeon, just for practice. for details follow the guidlines 
-    Pigeon p1;
+    //Pigeon p1;
+
+    Unit* flyer;
 
     //Create your list here
     public:

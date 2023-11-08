@@ -1,10 +1,16 @@
 #include <iostream>
 #include "HUMania.hpp"
+#include "ObjectCreator.hpp"
+#include <vector>
+
+vector<Unit*> objects = {};
 
 void HUMania::drawObjects()
 {
     // call draw functions of all the objects here
-    p1.draw();
+    for (int i; i < objects.size(); i++) {
+        objects[i]->draw();
+    }
 
 }
 
@@ -13,4 +19,13 @@ void HUMania::drawObjects()
 void HUMania::createObject(int x, int y)
 {
     std::cout << "Mouse clicked at: " << x << " -- " << y << std::endl;
+    //create an object of objectcreator
+    ObjectCreator obj;
+    //create a pointer to the new object
+    flyer = obj.getObject(x, y);
+    //pushing the pointer to the new object into the vector
+    objects.push_back(flyer);
 }
+
+//TO BE IMPLEMENTED
+HUMania::~HUMania() {}

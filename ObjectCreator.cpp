@@ -4,21 +4,28 @@
 #include "butterfly.hpp"
 #include <cstdlib>
 
-void ObjectCreator::getObject(int xMouse, int yMouse) {
-    int choice = rand() % 3;  //generate random number
+Unit* ObjectCreator::getObject(int xMouse, int yMouse) {
+    //int choice = rand() % 3;  //generate random number
+
+    //hardcoding choice for testing, uncomment above line in final implementation
+    int choice = 0;
 
     switch (choice)
     {
     case 0:
-        object = new Pigeon();
+        object = new Pigeon(xMouse, yMouse);
         break;
     
     case 1:
-        object = new Bee();
+        object = new Bee(xMouse, yMouse);
         break;
     
     default:
-        object = new Butterfly();
+        object = new Butterfly(xMouse, yMouse);
         break;
     }
 }
+
+ObjectCreator::ObjectCreator() {}
+
+ObjectCreator::~ObjectCreator() {}
