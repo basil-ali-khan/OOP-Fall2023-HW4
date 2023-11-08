@@ -11,6 +11,7 @@ class Unit{
 
     public:
         Unit();
-        virtual void fly();
+        Unit(SDL_Rect _srcRect, SDL_Rect _moverRect);
+        virtual void fly() = 0;
         void draw();
 };

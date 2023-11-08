@@ -1,4 +1,5 @@
 #include "pigeon.hpp"
+#include "Unit.hpp"
 
 // pigeon implementation will go here.
 
@@ -15,6 +16,11 @@
 
 // fly() is overrided from the superclass
 void Pigeon::fly(){
+    moverRect.x += 5;
+    if (moverRect.x > 1000) {
+        moverRect.x = 0;
+    }
+    
     switch(frame) {
         case 0:
             srcRect = {0,237,153,84};
@@ -31,17 +37,14 @@ void Pigeon::fly(){
             frame = 0;
             break;
     }
-    moverRect.x += 5;
-    if (moverRect.x > 1000) {
-        moverRect.x = 0;
-    }
+    
 }
 
-Pigeon::Pigeon(int xMouse, int yMouse){
-    // src coorinates from assets.png file, they have been found using spritecow.com
-    srcRect = {7,88,160,103};
+Pigeon::Pigeon(int xMouse, int yMouse) : Unit({7,88,160,103}, {xMouse, yMouse, 50, 50}){
+    // // src coorinates from assets.png file, they have been found using spritecow.com
+    // srcRect = {7,88,160,103};
 
-    // it will display pigeon on x = 30, y = 40 location, the size of pigeon is 50 width, 60 height
-    moverRect = {xMouse, yMouse, 50, 50};
+    // // it will display pigeon on x = 30, y = 40 location, the size of pigeon is 50 width, 60 height
+    // moverRect = {xMouse, yMouse, 50, 50};
 }
 

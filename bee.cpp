@@ -1,4 +1,5 @@
 #include "bee.hpp"
+#include "Unit.hpp"
 // bee implementation will go here.
 
 //bee1 = {63,619,151,166}
@@ -29,12 +30,15 @@ void Bee::fly(){
             break;
     }
     moverRect.x += 5;
+    if (moverRect.x > 1000) {
+        moverRect.x = 0;
+    }
 }
 
-Bee::Bee(int xMouse, int yMouse){
-    // src coorinates from assets.png file, they have been found using spritecow.com
-    srcRect = {63,619,151,166};
+Bee::Bee(int xMouse, int yMouse) : Unit({63,619,151,166}, {xMouse, yMouse, 50, 50}){
+    // // src coorinates from assets.png file, they have been found using spritecow.com
+    // srcRect = {63,619,151,166};
 
-    // it will display pigeon on x = 30, y = 40 location, the size of pigeon is 50 width, 60 height
-    moverRect = {xMouse, yMouse, 50, 50};
+    // // it will display pigeon on x = 30, y = 40 location, the size of pigeon is 50 width, 60 height
+    // moverRect = {xMouse, yMouse, 50, 50};
 }

@@ -24,6 +24,8 @@ Unit* ObjectCreator::getObject(int xMouse, int yMouse) {
         object = new Butterfly(xMouse, yMouse);
         break;
     }
+
+    return object;
 }
 
 ObjectCreator::ObjectCreator() {}

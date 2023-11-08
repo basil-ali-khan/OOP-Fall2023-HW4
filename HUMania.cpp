@@ -10,6 +10,7 @@ void HUMania::drawObjects()
     // call draw functions of all the objects here
     for (int i; i < objects.size(); i++) {
         objects[i]->draw();
+        objects[i]->fly();
     }
 
 }
