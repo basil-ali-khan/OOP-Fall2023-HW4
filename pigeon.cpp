@@ -17,9 +17,7 @@
 // fly() is overrided from the superclass
 void Pigeon::fly(){
     moverRect.x += 5;
-    if (moverRect.x > 1000) {
-        moverRect.x = 0;
-    }
+    moverRect.x %= 1000;
     
     switch(frame) {
         case 0:
