@@ -5,10 +5,10 @@
 #include <cstdlib>
 
 Unit* ObjectCreator::getObject(int xMouse, int yMouse) {
-    //int choice = rand() % 3;  //generate random number
+    int choice = rand() % 3;  //generate random number
+    Unit* object;
 
     //hardcoding choice for testing, uncomment above line in final implementation
-    int choice = 0;
 
     switch (choice)
     {

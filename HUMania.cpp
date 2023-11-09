@@ -3,7 +3,7 @@
 #include "ObjectCreator.hpp"
 #include <vector>
 
-vector<Unit*> objects = {};
+// vector<Unit*> objects = {};
 
 void HUMania::drawObjects()
 {
@@ -23,7 +23,7 @@ void HUMania::createObject(int x, int y)
     //create an object of objectcreator
     ObjectCreator obj;
     //create a pointer to the new object
-    flyer = obj.getObject(x, y);
+    Unit* flyer = obj.getObject(x, y);
     //pushing the pointer to the new object into the vector
     objects.push_back(flyer);
 }

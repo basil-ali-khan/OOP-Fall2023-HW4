@@ -4,10 +4,8 @@
 
 
 class Unit{
-
-    private:
+    protected:
         SDL_Rect srcRect, moverRect;
-        int frame = 0;
 
     public:
         Unit();

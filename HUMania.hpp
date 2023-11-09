@@ -12,7 +12,8 @@ class HUMania{
     //Right now we're creating one pigeon, just for practice. for details follow the guidlines 
     //Pigeon p1;
 
-    Unit* flyer;
+    // Unit* flyer;
+    vector<Unit*> objects = {};
 
     //Create your list here
     public:

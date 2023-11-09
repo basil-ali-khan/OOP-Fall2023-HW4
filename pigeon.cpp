@@ -33,7 +33,7 @@ void Pigeon::fly(){
             break;
 
         case 2:
-            srcRect = {7,88,155,103};
+            srcRect = {7,88,160,103};
             frame = 0;
             break;
     }
