@@ -13,7 +13,7 @@ class HUMania{
     //Pigeon p1;
 
     // Unit* flyer;
-    vector<Unit*> objects = {};
+    list<Unit*> objects = {};
 
     //Create your list here
     public:

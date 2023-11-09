@@ -57,7 +57,6 @@ void Bee::fly(){
             hover--;
         }
     }
-    cout << hover << endl;
 }
 
 Bee::Bee(int xMouse, int yMouse) : Unit({63,619,151,166}, {xMouse, yMouse, 50, 50}){
