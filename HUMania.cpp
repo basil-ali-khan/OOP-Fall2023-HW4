@@ -1,24 +1,16 @@
 #include <iostream>
 #include "HUMania.hpp"
 #include "ObjectCreator.hpp"
-#include <vector>
 
-// vector<Unit*> objects = {};
-
-void HUMania::drawObjects()
-{
-    // call draw functions of all the objects here
+void HUMania::drawObjects() {
     for (const auto& object : objects) {
         object->draw();
         object->fly();
     }
-
 }
 
-
 // creates new objects 
-void HUMania::createObject(int x, int y)
-{
+void HUMania::createObject(int x, int y) {
     std::cout << "Mouse clicked at: " << x << " -- " << y << std::endl;
     //create an object of objectcreator
     ObjectCreator obj;

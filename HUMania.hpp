@@ -8,20 +8,10 @@
 using namespace std;
 
 class HUMania{
-
-    //Right now we're creating one pigeon, just for practice. for details follow the guidlines 
-    //Pigeon p1;
-
-    // Unit* flyer;
     list<Unit*> objects = {};
-
-    //Create your list here
-    public:
-
     
+    public:
     void drawObjects(); 
     void createObject(int, int);
-    
-    // create destructor which deletes all dynamic objects
     ~HUMania();
 };

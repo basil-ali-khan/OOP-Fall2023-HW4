@@ -1,6 +1,5 @@
 #include "Unit.hpp"
 
-Unit::Unit() {}
 Unit::Unit(SDL_Rect _srcRect, SDL_Rect _moverRect) : srcRect(_srcRect), moverRect(_moverRect) {}
 
 void Unit::draw() {
