@@ -1,17 +1,28 @@
 #include <iostream>
 #include "HUMania.hpp"
 #include "ObjectCreator.hpp"
+#include <typeinfo>
 
 void HUMania::drawObjects() {
-    for (const auto& object : objects) {
-        object->draw();
-        object->fly();
+
+    auto it = objects.begin();
+
+    while (it != objects.end()) {
+        (*it)->draw();
+        (*it)->fly();
+        if ((*it)->outOfBounds()) {
+            delete *it;
+            it = objects.erase(it);
+        }
+        else {
+            ++it;
+        }
     }
+    
 }
 
 // creates new objects 
 void HUMania::createObject(int x, int y) {
-    std::cout << "Mouse clicked at: " << x << " -- " << y << std::endl;
     //create an object of objectcreator
     ObjectCreator obj;
     //create a pointer to the new object
@@ -21,4 +32,11 @@ void HUMania::createObject(int x, int y) {
 }
 
 //TO BE IMPLEMENTED
-HUMania::~HUMania() {}
+HUMania::~HUMania() {
+    auto it = objects.begin();
+
+    while (it != objects.end()) {
+        delete *it;
+        it = objects.erase(it);
+    }
+}

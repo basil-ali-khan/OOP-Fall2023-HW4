@@ -24,7 +24,6 @@ void Bee::fly(){
     if (random > 1) {
         if (hover <= 0) {
             moverRect.x += 5;
-            moverRect.x %= 1000;
         }
         else {
             hover--;
@@ -40,4 +39,10 @@ void Bee::fly(){
     }
 }
 
+bool Bee::outOfBounds() {
+    return moverRect.x > 1000;
+}
+
 Bee::Bee(int xMouse, int yMouse) : Unit({63,619,151,166}, {xMouse, yMouse, 50, 50}) {}
+
+Bee::~Bee() {}

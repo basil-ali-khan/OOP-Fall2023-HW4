@@ -35,3 +35,5 @@ void Butterfly::fly() {
 }
 
 Butterfly::Butterfly(int xMouse, int yMouse) : Unit({257,24,173,134}, {xMouse, yMouse, 50, 50}) {}
+
+Butterfly::~Butterfly() {}

@@ -9,4 +9,5 @@ class Pigeon : public Unit {
         void fly();
         Pigeon(int xMouse, int yMouse);
         // may add other overloaded constructors here... 
+        ~Pigeon();
 };

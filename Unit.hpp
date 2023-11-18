@@ -11,4 +11,6 @@ class Unit{
         Unit(SDL_Rect _srcRect, SDL_Rect _moverRect);
         virtual void fly() = 0;
         void draw();
+        virtual bool outOfBounds();
+        virtual ~Unit();
 };
