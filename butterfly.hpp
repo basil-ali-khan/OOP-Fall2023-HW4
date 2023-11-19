@@ -10,5 +10,6 @@ class Butterfly : public Unit {
         void fly();
         Butterfly(int xMouse, int yMouse); 
         // may add other overloaded constructors here... 
+        ~Butterfly();
 };
 

@@ -24,3 +24,5 @@ void Pigeon::fly(){
 }
 
 Pigeon::Pigeon(int xMouse, int yMouse) : Unit({7,88,160,103}, {xMouse, yMouse, 50, 50}) {}
+
+Pigeon::~Pigeon() {}

@@ -8,6 +8,8 @@ class Bee : public Unit {
 
     public:
         void fly();
+        bool outOfBounds();
         Bee(int xMouse, int yMouse); 
         // may add other overloaded constructors here... 
+        ~Bee();
 };
