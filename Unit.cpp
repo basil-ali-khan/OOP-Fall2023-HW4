@@ -6,6 +6,7 @@ void Unit::draw() {
     SDL_RenderCopy(Drawing::gRenderer, Drawing::assets, &srcRect, &moverRect);
 }
 
+// virtual outOfBounds function returns false
 bool Unit::outOfBounds() {
     return false;
 }

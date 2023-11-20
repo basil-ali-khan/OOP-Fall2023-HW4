@@ -40,7 +40,7 @@ void Bee::fly(){
     }
 }
 
-// checks if bee is out of bounds
+// only overloaded function, checks if bee is out of bounds
 bool Bee::outOfBounds() {
     return moverRect.x > 1000;
 }

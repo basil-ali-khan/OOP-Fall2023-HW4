@@ -1,6 +1,7 @@
 #include "pigeon.hpp"
 #include "Unit.hpp"
 
+// fly logic of pigeon
 void Pigeon::fly(){
     moverRect.x += 5;
     moverRect.x %= 1000;
