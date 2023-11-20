@@ -2,6 +2,7 @@
 #include <iostream>
 #include "Unit.hpp"
 
+// fly logic of butterfly
 void Butterfly::fly() {
     moverRect.x += 5;
     moverRect.x %= 1000;

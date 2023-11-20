@@ -4,12 +4,14 @@
 #include <typeinfo>
 
 void HUMania::drawObjects() {
-
+    // initializing iterator
     auto it = objects.begin();
 
+    // looping through the vector
     while (it != objects.end()) {
         (*it)->draw();
         (*it)->fly();
+        // if the object is out of bounds, delete it and erase it from the vector
         if ((*it)->outOfBounds()) {
             delete *it;
             it = objects.erase(it);
@@ -31,10 +33,11 @@ void HUMania::createObject(int x, int y) {
     objects.push_back(flyer);
 }
 
-//TO BE IMPLEMENTED
 HUMania::~HUMania() {
+    // initializing iterator
     auto it = objects.begin();
 
+    // deleting all objects in the vector
     while (it != objects.end()) {
         delete *it;
         it = objects.erase(it);

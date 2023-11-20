@@ -8,6 +8,7 @@ Unit* ObjectCreator::getObject(int xMouse, int yMouse) {
     int choice = rand() % 3;  //generate random number
     Unit* object;
 
+    // create object based on random number
     switch (choice) {
     case 0:
         return new Pigeon(xMouse, yMouse);

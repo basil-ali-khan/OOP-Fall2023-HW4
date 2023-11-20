@@ -1,6 +1,7 @@
 #include "bee.hpp"
 #include "Unit.hpp"
 
+// fly logic of bee
 void Bee::fly(){
     switch(frame) {
         case 0:
@@ -39,6 +40,7 @@ void Bee::fly(){
     }
 }
 
+// checks if bee is out of bounds
 bool Bee::outOfBounds() {
     return moverRect.x > 1000;
 }

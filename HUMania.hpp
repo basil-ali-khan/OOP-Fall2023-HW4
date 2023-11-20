@@ -8,7 +8,7 @@
 using namespace std;
 
 class HUMania{
-    list<Unit*> objects = {};
+    list<Unit*> objects;
     
     public:
     void drawObjects(); 
